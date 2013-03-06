@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^linkFromControllerCompletion)(NSError *error);
-
 @interface BCXOAuthViewControllerTouch : UIViewController
 
-@property (nonatomic, copy) linkFromControllerCompletion cancelCompletionBlock;
+@property (nonatomic, copy) void (^cancelCompletionBlock)(NSError *error);
 
 
 @end

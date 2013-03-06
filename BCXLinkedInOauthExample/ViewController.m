@@ -41,6 +41,9 @@
 {
     if ([sender.titleLabel.text isEqualToString:@"Link"]) {
         [[BCXLinkedinClient sharedClient] linkFromController:self completionHandler:^(NSError *error) {
+            if (error) {
+                NSLog(@"Error %@", error);
+            }
             [self dismissViewControllerAnimated:YES completion:nil];
             [self updateUI];
         }];
