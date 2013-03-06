@@ -18,6 +18,9 @@
 		5B521FB516E7959E006F74DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B521FB416E7959E006F74DB /* Default-568h@2x.png */; };
 		5B521FB816E7959E006F74DB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B521FB616E7959E006F74DB /* MainStoryboard.storyboard */; };
 		5B521FBB16E7959E006F74DB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B521FBA16E7959E006F74DB /* ViewController.m */; };
+		5B521FC816E79656006F74DB /* BCXOAuthViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B521FC416E79656006F74DB /* BCXOAuthViewControllerTouch.m */; };
+		5B521FC916E79656006F74DB /* BCXOAuthViewControllerTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B521FC516E79656006F74DB /* BCXOAuthViewControllerTouch.xib */; };
+		5B521FCA16E79656006F74DB /* BCXLinkedinClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B521FC716E79656006F74DB /* BCXLinkedinClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,11 @@
 		5B521FB716E7959E006F74DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5B521FB916E7959E006F74DB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B521FBA16E7959E006F74DB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B521FC316E79656006F74DB /* BCXOAuthViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCXOAuthViewControllerTouch.h; sourceTree = "<group>"; };
+		5B521FC416E79656006F74DB /* BCXOAuthViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCXOAuthViewControllerTouch.m; sourceTree = "<group>"; };
+		5B521FC516E79656006F74DB /* BCXOAuthViewControllerTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCXOAuthViewControllerTouch.xib; sourceTree = "<group>"; };
+		5B521FC616E79656006F74DB /* BCXLinkedinClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCXLinkedinClient.h; sourceTree = "<group>"; };
+		5B521FC716E79656006F74DB /* BCXLinkedinClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCXLinkedinClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 		5B521FA416E7959E006F74DB /* BCXLinkedInOauthExample */ = {
 			isa = PBXGroup;
 			children = (
+				5B521FC116E7960F006F74DB /* BCXLinkedInOauth */,
 				5B521FAD16E7959E006F74DB /* AppDelegate.h */,
 				5B521FAE16E7959E006F74DB /* AppDelegate.m */,
 				5B521FB616E7959E006F74DB /* MainStoryboard.storyboard */,
@@ -105,6 +114,19 @@
 				5B521FB416E7959E006F74DB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5B521FC116E7960F006F74DB /* BCXLinkedInOauth */ = {
+			isa = PBXGroup;
+			children = (
+				5B521FC316E79656006F74DB /* BCXOAuthViewControllerTouch.h */,
+				5B521FC416E79656006F74DB /* BCXOAuthViewControllerTouch.m */,
+				5B521FC516E79656006F74DB /* BCXOAuthViewControllerTouch.xib */,
+				5B521FC616E79656006F74DB /* BCXLinkedinClient.h */,
+				5B521FC716E79656006F74DB /* BCXLinkedinClient.m */,
+			);
+			name = BCXLinkedInOauth;
+			path = ../BCXLinkedInOauth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +185,7 @@
 				5B521FB316E7959E006F74DB /* Default@2x.png in Resources */,
 				5B521FB516E7959E006F74DB /* Default-568h@2x.png in Resources */,
 				5B521FB816E7959E006F74DB /* MainStoryboard.storyboard in Resources */,
+				5B521FC916E79656006F74DB /* BCXOAuthViewControllerTouch.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +199,8 @@
 				5B521FAB16E7959E006F74DB /* main.m in Sources */,
 				5B521FAF16E7959E006F74DB /* AppDelegate.m in Sources */,
 				5B521FBB16E7959E006F74DB /* ViewController.m in Sources */,
+				5B521FC816E79656006F74DB /* BCXOAuthViewControllerTouch.m in Sources */,
+				5B521FCA16E79656006F74DB /* BCXLinkedinClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +323,7 @@
 				5B521FC016E7959E006F74DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
