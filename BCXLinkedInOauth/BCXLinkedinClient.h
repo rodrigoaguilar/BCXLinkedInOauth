@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-static NSString *const kApiKey = @"nopumdr4h1i5";
-static NSString *const kSecretKey = @"W2XrBYinWGfZ6WZV";
+static NSString *const kApiKey = @"KEY";
+static NSString *const kSecretKey = @"SECRET";
 
-static NSString *const kLinkedinKeychainItemName = @"bContext: Linkedin";
-static NSString *const kCallbackURLString = @"bcontext-linkedin://success"; // This URL does not need to be for an actual web page
+static NSString *const kLinkedinKeychainItemName = @"NAME";
+static NSString *const kCallbackURLString = @"CALLBACK"; // This URL does not need to be for an actual web page
 static NSString *const kLinkedinScope = @"r_basicprofile rw_nus";
 
 static NSString *const kRequestTokenURLString = @"https://api.linkedin.com/uas/oauth/requestToken";
