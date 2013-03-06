@@ -42,7 +42,7 @@
 @property(retain, readwrite) NSString *session;
 @property(retain, readwrite) NSString *verifier;
 @property(retain, readwrite) NSNumber *duration;
-@property(retain, readwrite) NSMutableDictionary *attributes;
+@property(nonatomic, retain, readwrite) NSMutableDictionary *attributes;
 @property(readwrite, getter=isForRenewal) BOOL forRenewal;
 
 - (id)initWithKey:(NSString *)aKey secret:(NSString *)aSecret;

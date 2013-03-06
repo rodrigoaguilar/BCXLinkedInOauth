@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *linkButton;
 @property (weak, nonatomic) IBOutlet UIButton *apiCallButton;
+@property (weak, nonatomic) IBOutlet UITextField *statusTextField;
+@property (weak, nonatomic) IBOutlet UIButton *postStatusButton;
 
 @end
 
@@ -29,9 +31,13 @@
 {
     if ([[BCXLinkedinClient sharedClient] isLinked]) {
         self.apiCallButton.enabled = YES;
+        self.statusTextField.enabled = YES;
+        self.postStatusButton.enabled = YES;
         [self.linkButton setTitle:@"unLink" forState:UIControlStateNormal];
     } else {
         self.apiCallButton.enabled = NO;
+        self.statusTextField.enabled = NO;
+        self.postStatusButton.enabled = NO;
         [self.linkButton setTitle:@"Link" forState:UIControlStateNormal];
     }
 }
@@ -63,6 +69,20 @@
                                       failure:^(NSError *error) {
                                           NSLog(@"error : %@", [error localizedDescription]);
                                       }];
+}
+- (IBAction)postApiCall:(id)sender
+{
+    NSDictionary *params = @{@"comment": self.statusTextField.text, @"visibility" : @{@"code": @"anyone"} };
+    
+    [[BCXLinkedinClient sharedClient] postPath:@"http://api.linkedin.com/v1/people/~/shares"
+                                    parameters:params
+                                       success:^(id responseObject) {
+                                           [self.statusTextField resignFirstResponder];
+                                           NSLog(@"%@", responseObject);
+                                       } failure:^(NSError *error) {
+                                           [self.statusTextField resignFirstResponder];
+                                           NSLog(@"error : %@", error);
+                                       }];
 }
 
 @end

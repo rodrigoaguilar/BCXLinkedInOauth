@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B03B60F16E7DB240000C603 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B03B60E16E7DB240000C603 /* Security.framework */; };
 		5B521F9F16E7959E006F74DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B521F9E16E7959E006F74DB /* UIKit.framework */; };
 		5B521FA116E7959E006F74DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B521FA016E7959E006F74DB /* Foundation.framework */; };
 		5B521FA316E7959E006F74DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B521FA216E7959E006F74DB /* CoreGraphics.framework */; };
@@ -39,9 +40,11 @@
 		5B52200416E797FA006F74DB /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B521FFE16E797FA006F74DB /* Base64Transcoder.c */; };
 		5B52200516E797FA006F74DB /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B52200016E797FA006F74DB /* hmac.c */; };
 		5B52200616E797FA006F74DB /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 5B52200216E797FA006F74DB /* sha1.c */; };
+		F468C6D9FC9543F8B8964C17 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCA0C959B045403DBDC46EFE /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B03B60E16E7DB240000C603 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		5B521F9B16E7959E006F74DB /* BCXLinkedInOauthExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCXLinkedInOauthExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B521F9E16E7959E006F74DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B521FA016E7959E006F74DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -102,6 +105,8 @@
 		5B52200116E797FA006F74DB /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
 		5B52200216E797FA006F74DB /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
 		5B52200316E797FA006F74DB /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		B43349697A7745579CEB8A2E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		CCA0C959B045403DBDC46EFE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +114,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B03B60F16E7DB240000C603 /* Security.framework in Frameworks */,
 				5B521F9F16E7959E006F74DB /* UIKit.framework in Frameworks */,
 				5B521FA116E7959E006F74DB /* Foundation.framework in Frameworks */,
 				5B521FA316E7959E006F74DB /* CoreGraphics.framework in Frameworks */,
+				F468C6D9FC9543F8B8964C17 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +128,11 @@
 		5B521F9216E7959E006F74DB = {
 			isa = PBXGroup;
 			children = (
+				5B03B60E16E7DB240000C603 /* Security.framework */,
 				5B521FA416E7959E006F74DB /* BCXLinkedInOauthExample */,
 				5B521F9D16E7959E006F74DB /* Frameworks */,
 				5B521F9C16E7959E006F74DB /* Products */,
+				B43349697A7745579CEB8A2E /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +150,7 @@
 				5B521F9E16E7959E006F74DB /* UIKit.framework */,
 				5B521FA016E7959E006F74DB /* Foundation.framework */,
 				5B521FA216E7959E006F74DB /* CoreGraphics.framework */,
+				CCA0C959B045403DBDC46EFE /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,6 +269,7 @@
 				5B521F9716E7959E006F74DB /* Sources */,
 				5B521F9816E7959E006F74DB /* Frameworks */,
 				5B521F9916E7959E006F74DB /* Resources */,
+				7F23165CE79E4EA7A6DBE98C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +321,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F23165CE79E4EA7A6DBE98C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B521F9716E7959E006F74DB /* Sources */ = {
@@ -422,6 +450,7 @@
 		};
 		5B521FBF16E7959E006F74DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43349697A7745579CEB8A2E /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BCXLinkedInOauthExample/BCXLinkedInOauthExample-Prefix.pch";
@@ -433,6 +462,7 @@
 		};
 		5B521FC016E7959E006F74DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43349697A7745579CEB8A2E /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BCXLinkedInOauthExample/BCXLinkedInOauthExample-Prefix.pch";

@@ -38,24 +38,65 @@
                                     <action selector="apiCall:" destination="2" eventType="touchUpInside" id="rE0-Ua-8uF"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnc-bU-tAA">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5A-Oa-SNS">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Post Status update">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postApiCall:" destination="2" eventType="touchUpInside" id="H6M-Ey-iqX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="0Sg-rT-K0X" secondAttribute="bottom" constant="152" id="Uq4-wD-BEl"/>
+                            <constraint firstItem="0Sg-rT-K0X" firstAttribute="top" secondItem="3" secondAttribute="top" constant="131" id="6A0-pD-1D4"/>
+                            <constraint firstItem="Z5A-Oa-SNS" firstAttribute="centerX" secondItem="cnc-bU-tAA" secondAttribute="centerX" type="default" id="7hw-r1-XY4"/>
+                            <constraint firstItem="cnc-bU-tAA" firstAttribute="trailing" secondItem="0Sg-rT-K0X" secondAttribute="trailing" type="default" id="RTV-cH-vDj"/>
+                            <constraint firstAttribute="bottom" secondItem="cnc-bU-tAA" secondAttribute="bottom" constant="223" id="SXk-Iq-NtM"/>
                             <constraint firstItem="0Sg-rT-K0X" firstAttribute="centerX" secondItem="xtr-9d-CvM" secondAttribute="centerX" type="default" id="ePl-mT-I48"/>
-                            <constraint firstItem="0Sg-rT-K0X" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="lq4-Co-Cfc"/>
+                            <constraint firstItem="cnc-bU-tAA" firstAttribute="leading" secondItem="0Sg-rT-K0X" secondAttribute="leading" type="default" id="hm5-uE-JcV"/>
+                            <constraint firstItem="0Sg-rT-K0X" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="lMb-ez-9dX"/>
                             <constraint firstItem="xtr-9d-CvM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="72" id="oh8-f4-zIp"/>
+                            <constraint firstItem="Z5A-Oa-SNS" firstAttribute="top" secondItem="3" secondAttribute="top" constant="213" id="qiD-jq-jFn"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="apiCallButton" destination="0Sg-rT-K0X" id="0Rj-4A-xVH"/>
                         <outlet property="linkButton" destination="xtr-9d-CvM" id="exS-LE-U1B"/>
+                        <outlet property="postStatusButton" destination="Z5A-Oa-SNS" id="r2C-h0-xp0"/>
+                        <outlet property="statusTextField" destination="cnc-bU-tAA" id="BtV-MV-5Pq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="apiCall:"/>
+                <relationship kind="action" name="link:" candidateClass="UIButton"/>
+                <relationship kind="action" name="postApiCall:"/>
+                <relationship kind="outlet" name="apiCallButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="linkButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="postStatusButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="statusTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

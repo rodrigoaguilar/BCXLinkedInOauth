@@ -384,4 +384,32 @@
 	return [NSString stringWithFormat:@"oauth_token \"%@\" oauth_token_secret \"%@\" oauth_verifier \"%@\"", key, secret, verifier];
 }
 
+#pragma mark NSCoding
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+    if (self = [super init]) {
+        self.key = [decoder decodeObjectForKey:@"key"];
+        self.secret = [decoder decodeObjectForKey:@"secret"];
+        self.session = [decoder decodeObjectForKey:@"session"];
+        self.verifier = [decoder decodeObjectForKey:@"verifier"];
+        self.duration = [decoder decodeObjectForKey:@"duration"];
+        self.attributes = [decoder decodeObjectForKey:@"attributes"];
+        self.forRenewal = [decoder decodeBoolForKey:@"forRenewal"];
+    }
+	
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+    [encoder encodeObject:self.key forKey:@"key"];
+    [encoder encodeObject:self.secret forKey:@"secret"];
+    [encoder encodeObject:self.session forKey:@"session"];
+    [encoder encodeObject:self.verifier forKey:@"verifier"];
+    [encoder encodeObject:self.duration forKey:@"duration"];
+    [encoder encodeObject:self.attributes forKey:@"attributes"];
+    [encoder encodeBool:self.forRenewal forKey:@"forRenewal"];
+}
+
 @end

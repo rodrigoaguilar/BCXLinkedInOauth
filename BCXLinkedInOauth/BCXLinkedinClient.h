@@ -13,6 +13,11 @@ static NSString *const kSecretKey = @"W2XrBYinWGfZ6WZV";
 
 static NSString *const kLinkedinKeychainItemName = @"bContext: Linkedin";
 static NSString *const kCallbackURLString = @"bcontext-linkedin://success"; // This URL does not need to be for an actual web page
+static NSString *const kLinkedinScope = @"r_basicprofile rw_nus";
+
+static NSString *const kRequestTokenURLString = @"https://api.linkedin.com/uas/oauth/requestToken";
+static NSString *const kAccessTokenURLString = @"https://api.linkedin.com/uas/oauth/accessToken";
+static NSString *const kUserLoginURLString = @"https://www.linkedin.com/uas/oauth/authorize";
 
 @interface BCXLinkedinClient : NSObject
 

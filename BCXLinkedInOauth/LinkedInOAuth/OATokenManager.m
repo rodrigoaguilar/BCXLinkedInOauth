@@ -92,7 +92,7 @@
 		[self exchangeToken];
 	} else {
 		[authorizedTokenKey release];
-		authorizedTokenKey = [aKey retain];
+		authorizedTokenKey = [aKey copy];
 	}
 }
 
